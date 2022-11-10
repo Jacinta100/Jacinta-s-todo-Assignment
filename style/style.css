@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(https://images.pexels.com/photos/38537/woodland-road-falling-leaf-natural-38537.jpeg?auto=compress&cs=tinysrgb&w=600);
+    background-size:cover;
+    background-repeat: repeat;
+    color: white;
+    font-family:"poppins", sans-serif;
+    min-height: 100vh;
+
+
+}
+header{
+    font-size: 1.5rem;
+}
+header,form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 20vh;
+}
+
+
+
+form input,form button{
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background-color: white;
+}
+.todo-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.todo-list{
+    min-width: 30%;
+    List-style: none;
+}
+.todo{
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.todo li{
+    flex:1;
+}
+.delete-btn, .complete-btn{
+    background:#428f42 ;
+    color: white;
+    border:none;
+    padding: 1rem;
+    cursor: pointer;
+    
+}
+.complete-btn{
+    background: rgb(32, 218, 103);
+}
+.todo-item{
+    padding: 0rem 0.5rem;
+}
