@@ -1,14 +1,14 @@
 // selectors
 const formInput = document.querySelector('.todo-input');
 const formButton = document.querySelector('.todo-button');
-const todolist = document.querySelector('.todo-list');
+const todoList = document.querySelector('.todo-list');
 
 
 // Event Listeners
 formButton.addEventListener('click' , addTodo);
+todoList.addEventListener('click',deleteCheck);
 
-
-// Funtions
+//1. Funtions (To target the form and add todo )
 function addTodo(event){
     // this will prevent the form from reloading
     event.preventDefault();
@@ -22,7 +22,7 @@ function addTodo(event){
     newTodo.classList.add('todo-item');
     ultodoDiv.appendChild(newTodo);
 
-    // Tasks check button
+    // Tasks check button  
     const completedButton = document.createElement('button');
     completedButton.innerHTML= '<i class="fas fa-check"></i>';
     completedButton.classList.add("complete-btn");
@@ -35,7 +35,23 @@ function addTodo(event){
     ultodoDiv.appendChild(deleteButton);
 
     // Append to list
-    todolist.appendChild(ultodoDiv);
+    todoList.appendChild(ultodoDiv);
     // clear forminput value
     formInput.value="";
+}
+//2. Funtions (To target the the check and delete button to  mark or clear to do)
+ 
+function deleteCheck(e){
+ const item = e.target;
+//  Delete todo
+if(item.classList[0] === "delete-btn"){
+  const todo = item.parentElement;
+  todo.remove();
+}
+
+// Check Mark
+if (item.classList[0]==="complete-btn" ){
+const todo =item.parentElement;
+todo.classList.toggle("completed");
+}
 }

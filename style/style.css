@@ -7,16 +7,17 @@
 body{
     background-image: url(https://images.pexels.com/photos/38537/woodland-road-falling-leaf-natural-38537.jpeg?auto=compress&cs=tinysrgb&w=600);
     background-size:cover;
-    background-repeat: repeat;
     color: white;
     font-family:"poppins", sans-serif;
     min-height: 100vh;
 
 
 }
+
 header{
     font-size: 1.5rem;
 }
+
 header,form{
     display: flex;
     align-items: center;
@@ -26,12 +27,17 @@ header,form{
 
 
 
-form input,form button{
+form input,
+form button{
     padding: 0.5rem;
     font-size: 2rem;
     border: none;
     background-color: white;
+
 }
+
+
+
 .todo-container{
     display: flex;
     align-items: center;
@@ -51,7 +57,9 @@ form input,form button{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.5s ease;
 }
+
 .todo li{
     flex:1;
 }
@@ -68,4 +76,14 @@ form input,form button{
 }
 .todo-item{
     padding: 0rem 0.5rem;
+}
+.fa-trash, 
+.fa-check{
+   pointer-events: none;
+}
+
+/* to color your click button */
+.completed{
+    text-decoration: line-through;
+    opacity:0.5 ;
 }
